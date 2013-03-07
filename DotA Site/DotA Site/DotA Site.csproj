@@ -512,6 +512,12 @@
   <ItemGroup>
     <Content Include="Views\Matches\Index.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Json\heroesSimple.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\Json\itemsPrettified.json" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

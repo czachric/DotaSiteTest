@@ -34,7 +34,7 @@ namespace DotA_Site.Models
 
 		private void populateHeroDefinitions()
 		{
-			string heroJson = System.IO.File.ReadAllText(@"C:\Users\BAIRD\Dota Heroes\HeroesBundle\HeroesBundle\heroesSimple.json");
+			string heroJson = System.IO.File.ReadAllText(HttpRuntime.AppDomainAppPath + @"Content\Json\heroesSimple.json");
 			heroes = JsonConvert.DeserializeObject<List<Hero>>(heroJson);
 
 			
