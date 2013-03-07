@@ -1,0 +1,23 @@
+﻿@model List<DotA_Site.Models.Player>
+@{
+    ViewBag.Title = "MatchDetails";
+}
+
+<h2>MatchDetails</h2>
+	@foreach (DotA_Site.Models.Player player in Model)
+	{
+		<img src="/Content/HeroPortraits/@(player.internal_hero_name)_full.png" />
+		<p>
+			Player Name: @player.account_name
+			Hero Name : @player.hero_name
+			Hero Level : @player.level
+			Kills: @player.kills
+			Deaths: @player.deaths
+			Assists: @player.assists
+			Gold Earned: @player.gold
+			Last Hits: @player.last_hits
+			Denies: @player.denies
+			XPM: @player.xp_per_min
+			GPM: @player.gold_per_min
+		</p>	
+	}
