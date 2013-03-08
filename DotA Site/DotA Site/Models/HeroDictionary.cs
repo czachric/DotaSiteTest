@@ -36,7 +36,6 @@ namespace DotA_Site.Models
 		{
 			string heroJson = System.IO.File.ReadAllText(HttpRuntime.AppDomainAppPath + @"Content\Json\heroesSimple.json");
 			heroes = JsonConvert.DeserializeObject<List<Hero>>(heroJson);
-
 			
 			Hero placeHolder = new Hero(); //valve y u no zero base your heroes?!
 			placeHolder.id = 0;

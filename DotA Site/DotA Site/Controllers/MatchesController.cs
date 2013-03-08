@@ -25,7 +25,7 @@ namespace DotA_Site.Controllers
 			List<Player> players = new List<Player>();
 
 			DotaAPI apiCaller = new DotaAPI();
-			string matchJson = apiCaller.callApi("match_id=" + matchId); //hardcoded match_id = 127835521
+			string matchJson = apiCaller.callMyApi("matchId=" + matchId); //hardcoded match_id = 127835521
 			MatchDetails matchDetails = new MatchDetails();
 			matchDetails.populateResult(matchJson);
 			players = matchDetails.result.players;

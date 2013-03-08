@@ -32,6 +32,17 @@ namespace DotA_Site.Models
 			return result;
 		}
 
+		public string callMyApi(string suffix)
+		{
+			string result = string.Empty;
+
+			this.BaseAddress = "http://dotawebapitest.apphb.com/api/MatchDetails/GetMatchDetails?";
+			string fullUrl = this.BaseAddress + suffix;
+			result = this.DownloadString(fullUrl);
+
+			return result;
+		}
+
         public string callHeroApi()
         {
             string result = "No Result";
